@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratorio de Eventos Web</title>
+
+   <!-- Beacon de Marketing Cloud Personalization -->
+    <script
+        type="text/javascript"
+        async
+        src="//cdn.evgnet.com/beacon/seidorconsultingsl/pruebas_kj/scripts/evergage.min.js">
+    </script>
+    
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="form-panel" aria-labelledby="form-title">
+      <div class="form-header">
+        <p class="eyebrow">HTML, CSS y JavaScript vanilla</p>
+        <h1 id="form-title">Laboratorio de eventos</h1>
+        <p class="intro">
+          Completa el formulario y abre la consola del navegador para ver como se registran los eventos.
+        </p>
+      </div>
+
+      <form id="contactForm" class="contact-form" novalidate>
+        <div class="form-field">
+          <label for="name">Nombre</label>
+          <input
+            type="text"
+            id="name"
+            name="nombre"
+            placeholder="Ej. Laura Garcia"
+            autocomplete="name"
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="usuario@email.com"
+            autocomplete="email"
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="province">Provincia</label>
+          <select id="province" name="provincia">
+            <option value="">Selecciona una provincia</option>
+            <option value="Barcelona">Barcelona</option>
+            <option value="Madrid">Madrid</option>
+            <option value="Sevilla">Sevilla</option>
+            <option value="Valencia">Valencia</option>
+            <option value="Zaragoza">Zaragoza</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="phone">Telefono</label>
+          <input
+            type="tel"
+            id="phone"
+            name="telefono"
+            placeholder="Ej. 600 123 456"
+            autocomplete="tel"
+          >
+        </div>
+
+        <button type="submit" class="submit-button">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
