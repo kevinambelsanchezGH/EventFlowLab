@@ -16,7 +16,7 @@
 </head>
 <body>
   <main class="page">
-    <section class="form-panel" aria-labelledby="form-title">
+    <section id="registrationView" class="form-panel" aria-labelledby="form-title">
       <div class="form-header">
         <p class="eyebrow">HTML, CSS y JavaScript vanilla</p>
         <h1 id="form-title">Laboratorio de eventos</h1>
@@ -73,6 +73,72 @@
 
         <button type="submit" class="submit-button">Enviar</button>
       </form>
+    </section>
+
+    <section id="successView" class="success-panel view-hidden" aria-labelledby="success-title">
+      <div class="success-icon" aria-hidden="true">OK</div>
+      <p class="eyebrow">Registro completado</p>
+      <h1 id="success-title">Tu registro se ha enviado correctamente</h1>
+      <p class="intro">
+        Estamos preparando tu area personal. En unos segundos accederas a la pagina de inicio.
+      </p>
+    </section>
+
+    <section id="bankHomeView" class="bank-home view-hidden" aria-labelledby="bank-home-title">
+      <header class="bank-nav">
+        <a class="bank-brand" href="#" aria-label="Inicio Banco Horizonte">
+          <span class="brand-mark">BH</span>
+          <span>Banco Horizonte</span>
+        </a>
+        <nav aria-label="Navegacion principal">
+          <a href="#cuentas">Cuentas</a>
+          <a href="#tarjetas">Tarjetas</a>
+          <a href="#prestamos">Prestamos</a>
+        </nav>
+      </header>
+
+      <div class="bank-hero">
+        <div class="bank-hero-content">
+          <p class="eyebrow">Banca digital</p>
+          <h1 id="bank-home-title">Gestiona tu dinero con una banca clara y segura</h1>
+          <p class="intro">
+            Consulta saldos, mueve dinero y revisa tus productos desde una experiencia simple.
+          </p>
+          <div class="bank-actions">
+            <a class="primary-link" href="#cuentas">Ver cuentas</a>
+            <a class="secondary-link" href="#contacto">Hablar con un asesor</a>
+          </div>
+        </div>
+
+        <aside class="account-summary" aria-label="Resumen de cuenta">
+          <p class="summary-label">Saldo disponible</p>
+          <strong>12.480,35 EUR</strong>
+          <span>Cuenta corriente | ES82 **** 3941</span>
+          <div class="summary-row">
+            <span>Ingresos</span>
+            <strong>+2.150 EUR</strong>
+          </div>
+          <div class="summary-row">
+            <span>Gastos</span>
+            <strong>-730 EUR</strong>
+          </div>
+        </aside>
+      </div>
+
+      <div class="bank-products" id="cuentas">
+        <article>
+          <span>Cuentas</span>
+          <strong>Sin comisiones de mantenimiento</strong>
+        </article>
+        <article id="tarjetas">
+          <span>Tarjetas</span>
+          <strong>Control de limites y pagos online</strong>
+        </article>
+        <article id="prestamos">
+          <span>Prestamos</span>
+          <strong>Simulacion inmediata desde el area cliente</strong>
+        </article>
+      </div>
     </section>
   </main>
 

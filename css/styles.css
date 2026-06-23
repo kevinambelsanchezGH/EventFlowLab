@@ -6,6 +6,7 @@
   --color-border: #d9e0ea;
   --color-primary: #0f766e;
   --color-primary-dark: #0b5f59;
+  --color-navy: #172554;
   --color-focus: rgba(15, 118, 110, 0.18);
   --shadow-panel: 0 24px 70px rgba(22, 32, 51, 0.14);
 }
@@ -38,6 +39,10 @@ body {
   border: 1px solid var(--color-border);
   border-radius: 8px;
   box-shadow: var(--shadow-panel);
+}
+
+.view-hidden {
+  display: none;
 }
 
 .form-header {
@@ -126,6 +131,182 @@ select:focus {
   transform: translateY(1px);
 }
 
+.success-panel {
+  width: min(100%, 560px);
+  padding: 40px 32px;
+  text-align: center;
+  background: var(--color-panel);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: var(--shadow-panel);
+}
+
+.success-icon {
+  display: grid;
+  width: 64px;
+  height: 64px;
+  place-items: center;
+  margin: 0 auto 18px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: var(--color-primary);
+  border-radius: 50%;
+}
+
+.bank-home {
+  width: min(100%, 1120px);
+  min-height: calc(100vh - 64px);
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: var(--shadow-panel);
+  overflow: hidden;
+}
+
+.bank-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 28px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.bank-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  color: var(--color-navy);
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  color: #ffffff;
+  background: var(--color-navy);
+  border-radius: 6px;
+}
+
+.bank-nav nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.bank-nav nav a {
+  color: var(--color-muted);
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.bank-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  gap: 32px;
+  align-items: center;
+  padding: 56px 48px 40px;
+  background:
+    linear-gradient(120deg, rgba(15, 118, 110, 0.1), rgba(201, 151, 0, 0.12)),
+    #ffffff;
+}
+
+.bank-hero-content h1 {
+  max-width: 680px;
+  color: var(--color-navy);
+}
+
+.bank-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.primary-link,
+.secondary-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 16px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.primary-link {
+  color: #ffffff;
+  background: var(--color-primary);
+}
+
+.secondary-link {
+  color: var(--color-navy);
+  border: 1px solid var(--color-border);
+}
+
+.account-summary {
+  display: grid;
+  gap: 14px;
+  padding: 24px;
+  background: var(--color-navy);
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+.account-summary strong {
+  font-size: clamp(1.35rem, 3vw, 2rem);
+}
+
+.account-summary span,
+.summary-label {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.summary-row strong {
+  font-size: 1rem;
+}
+
+.bank-products {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--color-border);
+}
+
+.bank-products article {
+  display: grid;
+  gap: 10px;
+  min-height: 132px;
+  padding: 24px;
+  background: #ffffff;
+}
+
+.bank-products span {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+.bank-products strong {
+  line-height: 1.35;
+}
+
 @media (max-width: 540px) {
   .page {
     align-items: start;
@@ -134,5 +315,34 @@ select:focus {
 
   .form-panel {
     padding: 24px;
+  }
+
+  .success-panel {
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 760px) {
+  .bank-home {
+    min-height: auto;
+  }
+
+  .bank-nav,
+  .bank-hero {
+    padding-inline: 24px;
+  }
+
+  .bank-nav {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .bank-hero {
+    grid-template-columns: 1fr;
+    padding-top: 36px;
+  }
+
+  .bank-products {
+    grid-template-columns: 1fr;
   }
 }

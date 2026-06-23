@@ -2,6 +2,9 @@
 // querySelectorAll devuelve una lista de elementos que podemos recorrer.
 const form = document.querySelector("#contactForm");
 const formFields = form.querySelectorAll("input, select");
+const registrationView = document.querySelector("#registrationView");
+const successView = document.querySelector("#successView");
+const bankHomeView = document.querySelector("#bankHomeView");
 
 /**
  * Funcion central de tracking.
@@ -120,7 +123,19 @@ form.addEventListener("submit", (event) => {
   const submittedValues = Object.fromEntries(formData.entries());
 
   trackEvent("submit", "formulario", submittedValues);
+  showSuccessFlow();
 });
+
+function showSuccessFlow() {
+  registrationView.classList.add("view-hidden");
+  successView.classList.remove("view-hidden");
+
+  window.setTimeout(() => {
+    successView.classList.add("view-hidden");
+    bankHomeView.classList.remove("view-hidden");
+    bankHomeView.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, 1800);
+}
 
 
 
