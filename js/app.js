@@ -123,7 +123,8 @@ form.addEventListener("submit", (event) => {
   const submittedValues = Object.fromEntries(formData.entries());
 
   trackEvent("submit", "formulario", submittedValues);
-  showSuccessFlow();
+  sessionStorage.setItem("registeredUser", JSON.stringify(submittedValues));
+  window.location.href = "confirmacion.html";
 });
 
 function showSuccessFlow() {

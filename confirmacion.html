@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro completado – EventFlowLab</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="success-panel">
+      <div class="success-icon" aria-hidden="true">✓</div>
+      <p class="eyebrow">Registro completado</p>
+      <h1 id="confirm-title">Tu registro se ha enviado correctamente</h1>
+      <p class="intro" id="confirm-message">
+        Tu área personal está lista. Accede a tu banca digital.
+      </p>
+      <a class="primary-link" href="banco.html" style="margin-top:24px;">Acceder a mi banco</a>
+    </section>
+  </main>
+
+  <script>
+    const user = JSON.parse(sessionStorage.getItem("registeredUser") || "{}");
+    if (user.nombre) {
+      document.getElementById("confirm-title").textContent = `¡Bienvenido, ${user.nombre}!`;
+    }
+  </script>
+</body>
+</html>
